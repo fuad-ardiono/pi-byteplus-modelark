@@ -16,7 +16,7 @@
   "author": "irahardianto",
   "repository": {
     "type": "git",
-    "url": "https://github.com/irahardianto/byteplus-modelark"
+    "url": "https://github.com/irahardianto/pi-byteplus-modelark"
   },
   "peerDependencies": {
     "@mariozechner/pi-coding-agent": "*"
