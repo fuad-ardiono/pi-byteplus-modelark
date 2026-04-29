@@ -27,7 +27,6 @@ jobs:
         id: version
         with:
           commit-message: 'chore: release v{{version}}'
-          version-type: auto
           patch-wording: 'fix, patch, bugfix, chore, docs, refactor, perf, test, ci'
           minor-wording: 'feat, feature, add'
           major-wording: 'BREAKING CHANGE, breaking'
