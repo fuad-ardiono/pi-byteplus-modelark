@@ -156,6 +156,21 @@ export default function (pi: ExtensionAPI) {
           maxTokensField: "max_tokens" as const,
         },
       },
+
+      // ─── DeepSeek models ────────────────────────────────────────────
+      {
+        id: "deepseek-v3.2",
+        name: "DeepSeek V3.2",
+        reasoning: false,
+        input: ["text"] as ("text" | "image")[],
+        cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
+        contextWindow: 128000,
+        maxTokens: 8192,
+        compat: {
+          supportsDeveloperRole: false,
+          maxTokensField: "max_tokens" as const,
+        },
+      },
     ],
   });
 }
