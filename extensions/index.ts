@@ -1,7 +1,7 @@
 import type { ExtensionAPI } from "@mariozechner/pi-coding-agent";
 
 /**
- * BytePlus ModelArk Coding Plan — Pi Extension
+ * BytePlus ModelArk Coding Plan - Pi Extension
  *
  * Registers BytePlus ModelArk as a custom OpenAI-compatible provider.
  * Uses the Coding Plan Base URL (NOT the base model URL) so requests
@@ -18,7 +18,7 @@ import type { ExtensionAPI } from "@mariozechner/pi-coding-agent";
  */
 export default function (pi: ExtensionAPI) {
   pi.registerProvider("byteplus-modelark", {
-    // Coding Plan endpoint — OpenAI-compatible
+    // Coding Plan endpoint - OpenAI-compatible
     // WARNING: Do NOT use https://ark.ap-southeast.bytepluses.com/api/v3
     //          That is the base model URL and will incur additional charges.
     baseUrl: "https://ark.ap-southeast.bytepluses.com/api/coding/v3",
@@ -106,7 +106,7 @@ export default function (pi: ExtensionAPI) {
         reasoning: false,
         input: ["text"] as ("text" | "image")[],
         cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
-        contextWindow: 128000,
+        contextWindow: 200000,
         maxTokens: 8192,
         compat: {
           supportsDeveloperRole: false,
@@ -119,7 +119,7 @@ export default function (pi: ExtensionAPI) {
         reasoning: false,
         input: ["text"] as ("text" | "image")[],
         cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
-        contextWindow: 128000,
+        contextWindow: 200000,
         maxTokens: 8192,
         compat: {
           supportsDeveloperRole: false,
@@ -128,18 +128,18 @@ export default function (pi: ExtensionAPI) {
       },
 
       // ─── Kimi model ───────────────────────────────────────────────
-      {
-        id: "kimi-k2.5",
-        name: "Kimi K2.5",
-        reasoning: false,
-        input: ["text"] as ("text" | "image")[],
-        cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
-        contextWindow: 128000,
-        maxTokens: 8192,
-        compat: {
-          supportsDeveloperRole: false,
-          maxTokensField: "max_tokens" as const,
-        },
+      { 
+        id: "kimi-k2.5", 
+        name: "Kimi K2.5", 
+        reasoning: false, 
+        input: ["text"] as ("text" | "image")[], 
+        cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 }, 
+        contextWindow: 200000, 
+        maxTokens: 8192, 
+        compat: { 
+          supportsDeveloperRole: false, 
+          maxTokensField: "max_tokens" as const, 
+        }, 
       },
 
       // ─── GPT-OSS model ────────────────────────────────────────────
