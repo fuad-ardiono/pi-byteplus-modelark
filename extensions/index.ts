@@ -13,11 +13,11 @@ import type { ExtensionAPI } from "@mariozechner/pi-coding-agent";
  *   - Or replace "BYTEPLUS_API_KEY" below with your literal key.
  *
  * Usage:
- *   pi --model byteplus-modelark:ark-code-latest
- *   pi --model byteplus-modelark:dola-seed-2.0-pro
+ *   pi --model byteplus:ark-code-latest
+ *   pi --model byteplus:dola-seed-2.0-pro
  */
 export default function (pi: ExtensionAPI) {
-  pi.registerProvider("byteplus-modelark", {
+  pi.registerProvider("byteplus", {
     // Coding Plan endpoint - OpenAI-compatible
     // WARNING: Do NOT use https://ark.ap-southeast.bytepluses.com/api/v3
     //          That is the base model URL and will incur additional charges.
