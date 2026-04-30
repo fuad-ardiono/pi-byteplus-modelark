@@ -7,10 +7,9 @@ import type { ExtensionAPI } from "@mariozechner/pi-coding-agent";
  * Uses the Coding Plan Base URL (NOT the base model URL) so requests
  * consume the Coding Plan quota.
  *
- * Configuration:
- *   - Set the BYTEPLUS_API_KEY environment variable with your API key
- *     (create one at https://console.byteplus.com).
- *   - Or replace "BYTEPLUS_API_KEY" below with your literal key.
+ * Setup:
+ *   Set the BYTEPLUS_API_KEY environment variable with your API key
+ *   (create one at https://console.byteplus.com).
  *
  * Usage:
  *   pi --model byteplus:ark-code-latest
