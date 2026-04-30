@@ -52,8 +52,8 @@ export default function (pi: ExtensionAPI) {
         reasoning: false,
         input: ["text"] as ("text" | "image")[],
         cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
-        contextWindow: 128000,
-        maxTokens: 8192,
+        contextWindow: 262144,
+        maxTokens: 128000,
         compat: {
           supportsDeveloperRole: false,
           maxTokensField: "max_tokens" as const,
@@ -65,8 +65,8 @@ export default function (pi: ExtensionAPI) {
         reasoning: false,
         input: ["text"] as ("text" | "image")[],
         cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
-        contextWindow: 128000,
-        maxTokens: 8192,
+        contextWindow: 262144,
+        maxTokens: 128000,
         compat: {
           supportsDeveloperRole: false,
           maxTokensField: "max_tokens" as const,
@@ -78,8 +78,8 @@ export default function (pi: ExtensionAPI) {
         reasoning: false,
         input: ["text"] as ("text" | "image")[],
         cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
-        contextWindow: 128000,
-        maxTokens: 8192,
+        contextWindow: 262144,
+        maxTokens: 128000,
         compat: {
           supportsDeveloperRole: false,
           maxTokensField: "max_tokens" as const,
@@ -106,8 +106,8 @@ export default function (pi: ExtensionAPI) {
         reasoning: false,
         input: ["text"] as ("text" | "image")[],
         cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
-        contextWindow: 200000,
-        maxTokens: 8192,
+        contextWindow: 204800,
+        maxTokens: 65536,
         compat: {
           supportsDeveloperRole: false,
           maxTokensField: "max_tokens" as const,
@@ -119,8 +119,8 @@ export default function (pi: ExtensionAPI) {
         reasoning: false,
         input: ["text"] as ("text" | "image")[],
         cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
-        contextWindow: 200000,
-        maxTokens: 8192,
+        contextWindow: 204800,
+        maxTokens: 65536,
         compat: {
           supportsDeveloperRole: false,
           maxTokensField: "max_tokens" as const,
@@ -128,18 +128,18 @@ export default function (pi: ExtensionAPI) {
       },
 
       // ─── Kimi model ───────────────────────────────────────────────
-      { 
-        id: "kimi-k2.5", 
-        name: "Kimi K2.5", 
-        reasoning: false, 
-        input: ["text"] as ("text" | "image")[], 
-        cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 }, 
-        contextWindow: 200000, 
-        maxTokens: 8192, 
-        compat: { 
-          supportsDeveloperRole: false, 
-          maxTokensField: "max_tokens" as const, 
-        }, 
+      {
+        id: "kimi-k2.5",
+        name: "Kimi K2.5",
+        reasoning: false,
+        input: ["text", "image"] as ("text" | "image")[],
+        cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
+        contextWindow: 262144,
+        maxTokens: 65536,
+        compat: {
+          supportsDeveloperRole: false,
+          maxTokensField: "max_tokens" as const,
+        },
       },
 
       // ─── GPT-OSS model ────────────────────────────────────────────
@@ -164,7 +164,7 @@ export default function (pi: ExtensionAPI) {
         reasoning: false,
         input: ["text"] as ("text" | "image")[],
         cost: { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 },
-        contextWindow: 128000,
+        contextWindow: 131072,
         maxTokens: 8192,
         compat: {
           supportsDeveloperRole: false,
