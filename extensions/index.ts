@@ -23,7 +23,7 @@ export default function (pi: ExtensionAPI) {
     baseUrl: "https://ark.ap-southeast.bytepluses.com/api/coding/v3",
 
     // Reads from the BYTEPLUS_API_KEY env var, or use a literal key string
-    apiKey: "BYTEPLUS_API_KEY",
+    apiKey: "$BYTEPLUS_API_KEY",
 
     // ModelArk Coding Plan is OpenAI Chat Completions compatible
     api: "openai-completions",
